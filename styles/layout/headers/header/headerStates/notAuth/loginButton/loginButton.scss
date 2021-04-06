@@ -1,0 +1,21 @@
+.header__login {
+  &:hover {
+    p {
+      color: var(--color-active);
+    }
+
+    span {
+      transform: scale(1.05) rotateZ(-10deg);
+    }
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  span {
+    font-size: 1.25em;
+    margin-right: 0.25em;
+    transition: 0.3s transform, 0.5s color ease-in-out;
+  }
+}

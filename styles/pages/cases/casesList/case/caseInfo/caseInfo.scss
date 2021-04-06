@@ -1,0 +1,20 @@
+.case__info {
+  margin-top: 0.25em;
+
+  .case__name {
+    text-transform: uppercase;
+  }
+
+  .case__price {
+    margin-top: 0.5em;
+
+    img {
+      margin-right: 0.5em;
+    }
+
+    span {
+      color: var(--color-active);
+      font-weight: 800;
+    }
+  }
+}

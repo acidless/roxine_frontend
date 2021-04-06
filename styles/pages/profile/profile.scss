@@ -1,0 +1,22 @@
+@import "../../core/mixins";
+@import "premiumBlock/premiumBlock";
+@import "profileCenterBlock/profileCenterBlock";
+@import "profileStats/profileStats";
+
+.profile {
+  &__info {
+    margin-bottom: 10em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profile__top-block {
+    width: 100%;
+  }
+
+  .profile__info {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

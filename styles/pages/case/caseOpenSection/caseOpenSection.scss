@@ -1,0 +1,50 @@
+@import "caseStates/caseStates";
+@import "caseOpenMode/caseOpenMode";
+
+.case-wrapper__open-section {
+  margin: 5em 0;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr;
+
+  &.not-opened {
+    grid-template-columns: repeat(3, 1fr);
+
+    .case-wrapper__open-cards {
+      grid-column: 2;
+    }
+  }
+
+  .gradient-text {
+    animation: 1s FadeIn ease-in-out;
+  }
+
+  .case-wrapper__open-cards {
+    align-self: stretch;
+    grid-column: 1;
+  }
+
+  .case-wrapper__image {
+    width: 40em;
+    height: 40em;
+    animation: 0.5s FadeIn ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .case-wrapper__open-section {
+    grid-template-columns: 1fr !important;
+
+    .case-wrapper__open-cards {
+      grid-column: 1 !important;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .case-wrapper__image {
+    width: 30em !important;
+    height: 30em !important;
+  }
+}

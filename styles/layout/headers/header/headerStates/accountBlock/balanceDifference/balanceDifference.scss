@@ -1,0 +1,18 @@
+.balance-difference {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  animation: GoFromDown 0.8s, FadeIn 0.8s ease-in-out;
+
+  p {
+    font-size: 1.8em;
+  }
+
+  &.positive p {
+    color: var(--green);
+  }
+
+  &.negative p {
+    color: var(--red);
+  }
+}

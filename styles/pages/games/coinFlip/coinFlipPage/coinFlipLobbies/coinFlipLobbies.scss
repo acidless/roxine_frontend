@@ -1,0 +1,41 @@
+@import "../../../../../core/mixins";
+@import "coinFlipLobby/coinFlipLobby";
+@import "coinFlipRules/coinFlipRules";
+
+.lobbies-wrapper {
+  .left-block {
+    margin-right: 5em;
+    max-width: 40em;
+  }
+}
+
+.lobby-create {
+  button {
+    width: 100%;
+  }
+}
+
+.lobbies {
+  flex: 1;
+  animation: GoFromDown 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 1200px) {
+  .lobbies-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+
+    .left-block {
+      max-width: none;
+      margin: 0 0 5em 0;
+
+      .lobby-create {
+        button {
+          width: auto;
+        }
+
+        justify-content: center;
+      }
+    }
+  }
+}

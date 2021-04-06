@@ -1,0 +1,44 @@
+html {
+  --blue: #44a5f2;
+  --purple: #7157b8;
+  --red: #f12947;
+  --green: #41c86b;
+  --yellow: #f2b40a;
+
+  --color-active: #f88c45;
+  --color-active--hover: rgba(246, 102, 80, 1);
+  --color-active--gradient: linear-gradient(45deg, rgba(246, 102, 80, 1) 0%, rgba(252, 207, 49, 1) 100%);
+}
+
+.app-container[data-theme="ocean"] {
+  --body-bg: #1e232b;
+  --header-bg: #21262f;
+  --menu-bg: #292f39;
+  --paragraph-color: #6d7585;
+  --text-color: #bfc4cd;
+  --dark-color: #1a1c21;
+  --button--dark: #262c38;
+  --input-border: #2d374c;
+}
+
+.app-container[data-theme="dark"] {
+  --body-bg: #141414;
+  --paragraph-color: #6d7585;
+  --header-bg: #1a1a1a;
+  --menu-bg: #242424;
+  --text-color: #bfc4cd;
+  --dark-color: #121212;
+  --button--dark: #202020;
+  --input-border: #292929;
+}
+
+.app-container[data-theme="light-ocean"] {
+  --body-bg: #292b2f;
+  --paragraph-color: #6d7585;
+  --header-bg: #303237;
+  --menu-bg: #36393f;
+  --text-color: #bfc4cd;
+  --dark-color: #1f2124;
+  --button--dark: #36393f;
+  --input-border: #3e444e;
+}

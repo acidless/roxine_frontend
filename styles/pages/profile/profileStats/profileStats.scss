@@ -1,0 +1,108 @@
+@import "favoriteGame/favoriteGame";
+@import "displayedBadge/displayedBadge";
+
+.profile__stats {
+  background: var(--button--dark);
+  padding: 1em 2em 2em 2em;
+
+  .profile__cases-opened {
+    animation: GoFromDown 1s ease-in-out;
+  }
+
+  .flex-container {
+    span {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.profile__stats-block {
+  background: var(--dark-color);
+  width: 30em;
+  padding: 1.5em;
+
+  &:hover .profile__drop-icon {
+    transform: translateY(-5%) scale(1.05);
+  }
+
+  h2 {
+    margin-top: 0.5em;
+    font-size: 1.8em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .profile__drop-icon {
+    flex: 1;
+    transition: 0.3s all ease-in-out;
+
+    span {
+      font-size: 15em;
+    }
+
+    img,
+    svg {
+      width: 15em;
+      height: auto;
+    }
+  }
+}
+
+.profile__dispalyed-badge::before,
+.profile__favorite-game::after {
+  content: "";
+  position: absolute;
+  height: 0.25em;
+  width: 100%;
+  bottom: 0;
+  background: var(--color-active--gradient);
+  display: block;
+}
+
+.profile__center-block {
+  background: var(--header-bg);
+
+  &.premium {
+    background: url("/imgs/backgrounds/premium.svg") var(--header-bg);
+    background-size: 20%;
+    background-repeat: repeat;
+  }
+
+  .profile__avatar {
+    width: 15em;
+    height: 15em;
+    margin: 2em 5em;
+
+    animation: FadeIn 1s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::after {
+      @include underlineAfter(0.25em, -1em);
+      transform: translateY(100%);
+    }
+  }
+
+  .profile__name {
+    padding-top: 1em;
+    background: var(--button--dark);
+  }
+
+  &:hover .profile__avatar::after {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profile__info .profile__stats-block {
+    width: auto;
+  }
+
+  .profile__dispalyed-badge {
+    margin-bottom: 2.5em;
+  }
+}

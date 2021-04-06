@@ -1,0 +1,51 @@
+.profile__premium {
+  border: 0.3em solid var(--yellow);
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  background: var(--dark-color);
+  margin-bottom: 2em;
+
+  span,
+  p,
+  a {
+    font-size: 2em;
+  }
+
+  span,
+  p {
+    color: var(--yellow);
+  }
+
+  span {
+    margin-right: 0.2em;
+  }
+
+  p {
+    margin-right: 0.3em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profile__premium {
+    flex-direction: column;
+
+    span {
+      display: none;
+    }
+
+    p {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile__premium {
+    span,
+    a,
+    p {
+      font-size: 1.5em;
+    }
+  }
+}

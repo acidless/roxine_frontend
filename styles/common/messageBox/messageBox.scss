@@ -1,0 +1,46 @@
+@import "../../core/mixins";
+
+.message-box {
+  position: absolute;
+  background: var(--menu-bg);
+  padding: 1em;
+  border-radius: 0.25em;
+  z-index: 1000;
+  opacity: 0;
+  top: 135%;
+  width: max-content;
+  max-width: 80vw;
+  transform: scale(0.5);
+  transition: 0.3s opacity, 0.3s transform ease-in-out;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &:before {
+    @include leftLine(0.3em);
+    opacity: 1;
+  }
+
+  &:after {
+    @include triangle("bottom", var(--menu-bg), 1em, -1em, 1em);
+  }
+
+  &.right:after {
+    left: auto;
+    right: 1em;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+}

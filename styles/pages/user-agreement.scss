@@ -1,0 +1,9 @@
+.user-agreement {
+  div:not(:last-child) {
+    margin-bottom: 2em;
+  }
+
+  &__important {
+    font-style: italic;
+  }
+}

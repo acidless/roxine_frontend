@@ -1,0 +1,25 @@
+@import "withdrawWindow/withdrawWindow";
+@import "addBalanceWindow/addBalanceWindow";
+
+.header__profile-balance > span,
+.profile-balance__add > span {
+  margin-right: 0.25em;
+}
+
+.header__profile-balance {
+  img {
+    pointer-events: auto;
+    margin-right: 0.5em;
+  }
+
+  .profile-balance__add {
+    span {
+      transition: 0.3s all ease-in-out;
+      font-size: 1em;
+    }
+
+    &:hover span {
+      transform: scale(1.1);
+    }
+  }
+}

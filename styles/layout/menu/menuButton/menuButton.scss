@@ -1,0 +1,18 @@
+.menu__button {
+  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  right: -2.25em;
+  transform-origin: center;
+  border-radius: 0 0.25em 0.25em 0;
+  background: var(--menu-bg);
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  span {
+    transition: 0.5s transform ease-in-out;
+    color: var(--color-active);
+  }
+}

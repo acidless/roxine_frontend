@@ -1,0 +1,12 @@
+@import "coinFlipPage/coinFlipPage";
+
+.games .coin-flip {
+  background: url("/imgs/games/coinFlip.png") var(--menu-bg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  &:hover {
+    background-size: 105%;
+  }
+}

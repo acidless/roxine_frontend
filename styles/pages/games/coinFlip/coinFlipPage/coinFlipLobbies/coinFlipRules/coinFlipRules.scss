@@ -1,0 +1,15 @@
+.game-rules {
+  margin-bottom: 2em;
+  background: var(--dark-color);
+  padding: 3em;
+  border-radius: 1em;
+
+  h3 {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  ul {
+    list-style-position: inside;
+    list-style-type: " - ";
+  }
+}

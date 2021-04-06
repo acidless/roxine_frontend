@@ -1,0 +1,108 @@
+@import "../../core/mixins";
+@import "premiumAdvantage/premiumAdvantage";
+
+.premium {
+  &__advantages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35em);
+    grid-gap: 5em;
+    margin-bottom: 5em;
+    animation: 0.8s FadeIn ease-in-out;
+  }
+
+  .premium-form {
+    width: 70em;
+
+    .input-wrapper {
+      margin-bottom: 10em;
+    }
+
+    &__result {
+      align-self: flex-start;
+
+      span:first-child {
+        margin-right: 0.5em;
+        padding-right: 0.5em;
+
+        &:after {
+          content: " ";
+          background: var(--menu-bg);
+          top: 0;
+          right: 0;
+          width: 0.1em;
+          height: 100%;
+          position: absolute;
+        }
+      }
+    }
+
+    &__discount {
+      position: absolute;
+      top: 9em;
+      left: 17em;
+
+      &.active {
+        &::before {
+          background: var(--color-active--gradient);
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -3.5em;
+        background: var(--paragraph-color);
+        width: 0.2em;
+        height: 3.8em;
+      }
+
+      p {
+        font-size: 2.5em !important;
+      }
+
+      p,
+      span {
+        color: var(--paragraph-color);
+        margin: 0 !important;
+      }
+
+      span {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .premium {
+    .premium-form {
+      width: 60em;
+
+      &__discount {
+        left: 13.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .premium .premium-form {
+    width: 40em;
+
+    .premium-form__discount {
+      left: 8em;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .premium .premium-form__discount {
+    left: 20% !important;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .premium .premium-form__discount {
+    left: 18% !important;
+  }
+}

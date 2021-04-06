@@ -1,0 +1,8 @@
+@import "badge/badge";
+
+.badges-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20em);
+  justify-content: center;
+  grid-gap: 2em;
+}

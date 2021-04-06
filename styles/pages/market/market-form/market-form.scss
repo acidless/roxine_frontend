@@ -1,0 +1,50 @@
+@import "../../../core/mixins";
+
+.market-form {
+  animation: 0.8s FadeIn, 0.8s GoFromDown ease-in-out;
+
+  ol {
+    list-style-position: inside;
+  }
+
+  hr {
+    margin: 2em 0;
+  }
+
+  &__game-pass-notify {
+    span:first-child {
+      position: relative;
+
+      &::after {
+        @include underlineAfter(0.1em);
+        opacity: 1;
+        left: 0;
+      }
+    }
+  }
+
+  &__game-pass-notify,
+  &__game-pass-sep {
+    animation: 0.5s FadeIn ease-in-out;
+  }
+
+  &__values {
+    margin-bottom: 3em;
+
+    p.robux,
+    span.robux {
+      font-size: 3em;
+      align-self: center;
+    }
+
+    &-convert {
+      align-self: flex-end;
+      margin: 0 0.5em;
+      font-size: 4em;
+    }
+
+    .input-wrapper {
+      max-width: 20em;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.dropping-list__button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10000;
+  right: 0;
+
+  &:hover {
+    span {
+      color: var(--color-active);
+    }
+  }
+
+  span {
+    font-size: 1.5em;
+    transition: 0.3s all ease-in-out;
+  }
+
+  &.active span {
+    transform: rotateZ(180deg);
+  }
+}

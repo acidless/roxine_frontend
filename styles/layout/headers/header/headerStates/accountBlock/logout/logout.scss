@@ -1,0 +1,30 @@
+.header__logout {
+  &:hover {
+    span {
+      color: var(--red);
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  span {
+    font-size: 1.25em;
+    color: var(--red);
+  }
+
+  &::after {
+    opacity: 0;
+    content: "Выйти";
+    color: var(--text-color);
+    position: absolute;
+    right: 0;
+    padding: 0.5em;
+    font-size: 0.7em;
+    border-radius: 0.25em;
+    top: 100%;
+    background: var(--menu-bg);
+    transition: 0.3s opacity ease-in-out;
+  }
+}

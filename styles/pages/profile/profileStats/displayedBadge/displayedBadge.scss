@@ -1,0 +1,13 @@
+.profile__dispalyed-badge {
+  h2,
+  .profile__drop-value,
+  .profile__drop-icon {
+    animation: GoFromLeft 1s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profile__info .profile__dispalyed-badge {
+    margin-bottom: 2.5em;
+  }
+}

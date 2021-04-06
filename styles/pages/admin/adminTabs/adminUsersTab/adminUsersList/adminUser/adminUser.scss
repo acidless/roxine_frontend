@@ -1,0 +1,19 @@
+.admin-users__user {
+  .admin-users__inspect-user {
+    transition: 0.3s transform ease-in-out;
+
+    span {
+      font-size: 1.25em;
+      transform: rotateZ(180deg);
+      transition: 0.3s color ease-in-out;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      span {
+        color: var(--color-active);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "adminUser/adminUser";
+@import "adminCurrentUser/adminCurrentUser";
+
+.admin-users__list {
+  padding: 0;
+
+  > div {
+    padding: 0.5em !important;
+  }
+}

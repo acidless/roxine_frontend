@@ -1,0 +1,14 @@
+.header__top {
+  padding: 0.5em 1em;
+  background: var(--body-bg);
+
+  .header__logo {
+    text-transform: uppercase;
+    user-select: none;
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+    }
+  }
+}

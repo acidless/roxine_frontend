@@ -1,0 +1,12 @@
+.withdraws-list {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(9em, 17.5em));
+    grid-gap: 1em;
+    text-align: center;
+
+    button {
+      font-size: 2em;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.form-container {
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+
+  .login-form {
+    &__buttons {
+      margin-top: 2em;
+    }
+  }
+}

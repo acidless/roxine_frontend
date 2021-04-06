@@ -1,0 +1,12 @@
+.error-button {
+  position: absolute;
+  top: 50%;
+  left: 0.25em;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+
+  span {
+    color: var(--red);
+  }
+}

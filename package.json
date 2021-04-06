@@ -1,0 +1,32 @@
+{
+  "name": "rocasino",
+  "version": "0.1.0",
+  "private": true,
+  "main": "pages/index.js",
+  "scripts": {
+    "dev": "../../react/roxine_frontend/node_modules/.bin/next dev",
+    "build-static": "../../react/roxine_frontend/node_modules/.bin/next build && next export",
+    "build": "../../react/roxine_frontend/node_modules/.bin/next build",
+    "start": "../../react/roxine_frontend/node_modules/.bin/next start"
+  },
+  "dependencies": {
+    "@types/next": "^9.0.0",
+    "@types/next-redux-wrapper": "^3.0.0",
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-redux": "^7.1.11",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "formik": "^2.2.3",
+    "material-design-icons": "^3.0.1",
+    "next": "10.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.29.0",
+    "typescript": "^4.0.5"
+  }
+}

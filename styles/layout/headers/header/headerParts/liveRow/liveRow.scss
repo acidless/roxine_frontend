@@ -1,0 +1,46 @@
+@import "liveRowItems/liveRowItems";
+@import "../../../../../core/mixins";
+
+.header__live-row {
+  text-transform: uppercase;
+  background: var(--body-bg);
+
+  h2 {
+    writing-mode: vertical-lr;
+    background: var(--header-bg);
+    padding: 0 1em;
+    font-size: 2em;
+    transform: rotateZ(-180deg);
+    margin-right: 0.25em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__live-row {
+    hr {
+      display: none;
+    }
+
+    .live-row__content {
+      flex-direction: column;
+
+      h2 {
+        writing-mode: horizontal-tb;
+        transform: none;
+        padding: 1em 0;
+        justify-content: center;
+        background: none;
+        position: relative;
+
+        &::after {
+          @include underlineAfter(0.2em);
+          opacity: 1;
+        }
+      }
+
+      .live-row__items {
+        flex: none;
+      }
+    }
+  }
+}

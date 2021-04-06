@@ -1,0 +1,10 @@
+.dropping-list__content {
+  padding-left: 4em;
+  transition: 0.3s height ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .dropping-list__content {
+    padding: 0 !important;
+  }
+}

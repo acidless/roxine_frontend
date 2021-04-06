@@ -1,0 +1,12 @@
+@import "../../../../../../core/mixins";
+
+.header__profile-avatar {
+  margin: 0 1em;
+
+  &::after {
+    @include underlineAfter(0.1em, 0);
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}

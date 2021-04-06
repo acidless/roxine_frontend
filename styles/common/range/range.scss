@@ -1,0 +1,84 @@
+@mixin thumb() {
+  position: relative;
+  z-index: 10;
+  border: none;
+  background: var(--color-active--gradient);
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  margin-top: -0.25em;
+  cursor: pointer;
+  transition: 0.3s box-shadow ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 5px 1px var(--color-active);
+  }
+}
+
+@mixin track() {
+  height: 1em;
+  border-radius: 3em;
+  background: var(--header-bg);
+}
+
+@mixin progress() {
+  height: 2em;
+  border-bottom-left-radius: 3em;
+  border-top-left-radius: 3em;
+  background: var(--color-active--gradient);
+}
+
+input[type="range"] {
+  padding: 0;
+  border: none;
+  -webkit-appearance: none;
+  position: relative;
+
+  /*====================*/
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include thumb;
+  }
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+  &::-ms-thumb {
+    @include thumb;
+  }
+
+  /*====================*/
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+  }
+
+  &::-moz-range-track {
+    @include track;
+  }
+
+  &::-ms-track {
+    @include track;
+  }
+
+  &::-moz-range-progress {
+    @include progress;
+    height: 1em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+  }
+
+  /*====================*/
+
+  &:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.input__progress {
+  @include progress;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

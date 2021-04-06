@@ -1,0 +1,30 @@
+.case-wrapper__drop,
+.profile__drop {
+  background: var(--header-bg);
+  border-radius: 0.25em;
+  padding: 1em;
+  transition: 0.3s all ease-in-out;
+  border-bottom: 0.5em solid transparent;
+  animation: cardAppear 0.5s ease-in-out;
+
+  img {
+    width: 12em;
+    height: auto;
+    transition: 0.3s transform ease-in-out;
+  }
+
+  &:hover {
+    border-bottom: 0.5em solid var(--rarity-color);
+
+    .robux-icon,
+    img {
+      transform: translateY(-5%);
+    }
+  }
+
+  .drop__value {
+    font-size: 2.5em;
+    color: var(--rarity-color);
+    animation: FadeIn 0.8s ease-in-out;
+  }
+}

@@ -1,0 +1,26 @@
+@import "caseInfo/caseInfo";
+@import "caseHoverSvg/caseHoverSvg";
+
+.case {
+  cursor: pointer;
+  z-index: 2;
+  padding: 1em;
+  animation: FadeIn 0.8s ease-in-out;
+
+  &:hover {
+    svg rect {
+      stroke-width: 6;
+      stroke-dashoffset: 300;
+    }
+    .case__image {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    width: 11em;
+    height: 11em;
+
+    transition: 0.3s transform ease-in-out;
+  }
+}

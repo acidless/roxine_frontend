@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap"
+      as="font"
+      rel="preload stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="preload stylesheet"
+      as="font"
+    />
+    <link rel="shortcut icon" href="/imgs/dollar.svg" type="image/png" />
+    <title>Technical Works | Roxine</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        color: #6d7585;
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #141414;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .technical-works-wrapper,
+      .technical-works {
+        position: relative;
+      }
+
+      .technical-works {
+        padding: 5em;
+        background: #1a1a1a;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      p {
+        font-size: 2rem;
+        word-break: break-word;
+        text-align: center;
+      }
+
+      .material-icons {
+        user-select: none;
+      }
+
+      .technical-works__gear {
+        position: absolute;
+        font-size: 50em;
+        left: -0.45em;
+        -webkit-animation: 5s Spin linear infinite;
+        animation: 5s Spin linear infinite;
+      }
+
+      .technical-works__icon {
+        font-size: 10em;
+        margin-top: 0.25em;
+        -webkit-animation: 3s Scale infinite linear;
+        animation: 3s Scale infinite linear;
+        background: linear-gradient(
+          45deg,
+          rgba(246, 102, 80, 1) 0%,
+          rgba(252, 207, 49, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h2 {
+        text-align: center;
+        color: #f88c45;
+        font-size: 10em;
+        margin-bottom: 0.1em;
+        text-shadow: 0.005em 0.005em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.01em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.015em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.02em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.025em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.03em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.035em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.04em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.045em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.05em 0.005em rgba(246, 102, 80, 1),
+          0.005em 0.09em 0.03em rgba(16, 16, 16, 0.4),
+          0.005em 0.11em 0.05em rgba(16, 16, 16, 0.2),
+          0.005em 0.125em 0.175em rgba(16, 16, 16, 0.2),
+          0.005em 0.15em 0.3em rgba(16, 16, 16, 0.4);
+      }
+
+      @keyframes Spin {
+        0% {
+          transform: rotateZ(0deg);
+        }
+
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+
+      @keyframes Scale {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+        .technical-works__gear {
+          top: -0.4em;
+          left: 0;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        html {
+          font-size: 9px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        html {
+          font-size: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="technical-works-wrapper">
+      <span class="material-icons technical-works__gear">settings</span>
+      <div class="technical-works">
+        <h2>СТОП-СТОП</h2>
+        <p>
+          Веб-сайт был оккупирован роботами-хомячками. Попробуйте повторить
+          попытку через 30 минут.
+        </p>
+        <span class="material-icons technical-works__icon gradient-text"
+          >handyman
+        </span>
+      </div>
+    </div>
+    <script>
+      const icons = [
+        "handyman",
+        "plumbing",
+        "electrical_services",
+        "miscellaneous_services",
+      ];
+      const iconsItem = document.querySelector(".technical-works__icon");
+      let currentIndex = 0;
+
+      setInterval(() => {
+        currentIndex =
+          currentIndex === icons.length - 1
+            ? (currentIndex = 0)
+            : ++currentIndex;
+
+        iconsItem.innerText = icons[currentIndex];
+        iconsItem.animate(
+          [
+            {
+              opacity: 0,
+            },
+            {
+              opacity: 1,
+            },
+          ],
+          {
+            duration: 1000,
+            iterations: 1,
+          }
+        );
+      }, 3000);
+    </script>
+  </body>
+</html>

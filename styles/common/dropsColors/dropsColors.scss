@@ -1,0 +1,54 @@
+.live-row__item.common,
+.robux-icon.common,
+.profile__drop.common,
+.case-wrapper__drop.common {
+  --rarity-color: #dfdede;
+  --rarity-color--gradient: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(121, 120, 120, 1) 100%);
+}
+
+.live-row__item.uncommon,
+.robux-icon.uncommon,
+.profile__drop.uncommon,
+.case-wrapper__drop.uncommon {
+  --rarity-color: #2df86b;
+  --rarity-color--gradient: linear-gradient(45deg, rgba(99, 241, 66, 1) 0%, rgba(0, 252, 139, 1) 100%);
+}
+
+.live-row__item.rare,
+.robux-icon.rare,
+.profile__drop.rare,
+.case-wrapper__drop.rare {
+  --rarity-color: #1c91e2;
+  --rarity-color--gradient: linear-gradient(
+    90deg,
+    rgba(34, 220, 253, 1) 0%,
+    rgba(28, 145, 226, 1) 50%,
+    rgba(70, 84, 172, 1) 100%
+  );
+}
+
+.live-row__item.epic,
+.robux-icon.epic,
+.profile__drop.epic,
+.case-wrapper__drop.epic {
+  --rarity-color: #c900fa;
+  --rarity-color--gradient: linear-gradient(45deg, rgba(224, 0, 252, 1) 0%, rgba(90, 0, 245, 1) 100%);
+}
+
+.live-row__item.legendary,
+.robux-icon.legendary,
+.profile__drop.legendary,
+.case-wrapper__drop.legendary {
+  --rarity-color: var(--color-active);
+  --rarity-color--gradient: var(--color-active--gradient);
+}
+
+.live-row__item.win,
+.profile__drop.win {
+  --rarity-color: var(--green);
+}
+
+.live-row__item.lose,
+.profile__drop.lose {
+  --rarity-color: var(--red);
+}

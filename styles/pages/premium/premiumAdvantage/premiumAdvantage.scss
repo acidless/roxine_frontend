@@ -1,0 +1,44 @@
+.premium__advantage {
+  padding: 1em 0 1em 1em;
+  height: 20em;
+  background: var(--dark-color);
+  animation: 0.8s GoFromDown ease-in-out;
+
+  &:before {
+    @include leftLine();
+  }
+
+  .advantage__title {
+    .advantage__img {
+      margin-right: 1em;
+
+      &.padding {
+        padding: 1.2em;
+        background: var(--body-bg);
+
+        img {
+          width: 3em;
+          height: 3em;
+        }
+      }
+
+      img {
+        width: 5.4em;
+        height: 5.4em;
+      }
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: var(--color-active);
+      font-weight: lighter;
+      font-size: 2.5em;
+    }
+  }
+
+  .advantage__description {
+    p {
+      font-size: 2.3em;
+    }
+  }
+}

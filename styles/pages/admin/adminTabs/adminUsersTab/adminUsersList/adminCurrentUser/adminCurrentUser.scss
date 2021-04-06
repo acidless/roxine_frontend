@@ -1,0 +1,51 @@
+.admin-users__current-user {
+  max-width: 450px;
+  width: 100%;
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  .current-user__main-info {
+    img {
+      margin-right: 1em;
+    }
+    p {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+
+  .current-user__info {
+    span {
+      color: var(--color-active);
+      margin-right: 0.25em;
+    }
+
+    p {
+      margin-bottom: 0.5em;
+    }
+
+    p:last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+  .current-user__actions {
+    .button_dark {
+      &:hover {
+        color: var(--color-active);
+      }
+    }
+
+    .button_dark,
+    .button--red {
+      width: 100%;
+      font-size: 2em;
+
+      &:not(:last-child) {
+        margin-bottom: 0.25em;
+      }
+    }
+  }
+}

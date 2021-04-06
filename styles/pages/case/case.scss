@@ -1,0 +1,26 @@
+@import "caseDrops/caseDrops";
+@import "caseOpenSection/caseOpenSection";
+@import "dropCard/dropCard";
+
+.robux-icon {
+  transition: 0.3s all ease-in-out;
+  animation: FadeIn 0.8s ease-in-out;
+  span {
+    font-size: 10em;
+    background: var(--rarity-color--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    user-select: none;
+  }
+}
+
+.case-wrapper__drops,
+.profile__drops {
+  margin-top: 1.5em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20em);
+  grid-template-rows: repeat(auto-fit, 19em);
+  grid-gap: 3em;
+}

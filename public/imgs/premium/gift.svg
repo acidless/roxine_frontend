@@ -1,0 +1,26 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.77 258.67">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fbc037;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+
+      .cls-2 {
+        fill: #fbc037;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M23.37,109.26H226.71a0,0,0,0,1,0,0V245.09a6.08,6.08,0,0,1-6.08,6.08H29.45a6.08,6.08,0,0,1-6.08-6.08V109.26A0,0,0,0,1,23.37,109.26Z"/>
+  <g>
+    <rect class="cls-2" x="96.37" y="115.3" width="14.77" height="129.84"/>
+    <rect class="cls-2" x="134.21" y="115.3" width="14.77" height="129.84"/>
+  </g>
+  <rect class="cls-1" x="7.5" y="67.99" width="235.77" height="39.96" rx="5.79"/>
+  <g>
+    <ellipse class="cls-1" cx="222.03" cy="225.75" rx="18.53" ry="38.55" transform="translate(-227.92 35.12) rotate(-45)"/>
+    <ellipse class="cls-1" cx="288.69" cy="225.75" rx="38.55" ry="18.53" transform="translate(-208.4 82.25) rotate(-45)"/>
+  </g>
+</svg>

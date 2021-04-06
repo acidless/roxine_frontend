@@ -1,0 +1,48 @@
+@import "coinFlip/coinFlip";
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35em);
+  grid-gap: 5em;
+  animation: GoFromDown 0.8s ease-in-out;
+
+  &__game {
+    height: 20em;
+    background: var(--menu-bg);
+    border-radius: 3em;
+    transition: 0.5s box-shadow, 0.5s background-position, 0.5s background-size ease-in-out;
+    animation: FadeIn 0.8s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 1px var(--color-active);
+
+      .game__icon {
+        transform: translateY(-15%);
+        &.coin-flip-icon {
+          transform: translateY(-15%) rotateY(180deg);
+        }
+      }
+    }
+
+    a {
+      padding: 0.5em;
+      display: block;
+    }
+
+    .game__name {
+      font-size: 1.2em;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .game__icon {
+      flex: 1;
+      transition: 0.3s transform ease-in-out;
+
+      img {
+        width: 4em;
+        height: 4em;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.global-info__info {
+  padding: 1.5em 2em 1.5em 0;
+
+  h4,
+  .global-info__message {
+    color: white;
+  }
+
+  h4 {
+    margin-bottom: 0.25em;
+  }
+
+  .global-info__message {
+    font-size: 1.5em;
+  }
+}

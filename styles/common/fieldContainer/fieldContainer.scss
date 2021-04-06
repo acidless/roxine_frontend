@@ -1,0 +1,20 @@
+@import "fieldContainerError/fieldContainerError";
+
+.input-wrapper {
+  width: 100%;
+
+  .content {
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.error input {
+    padding-left: 2em;
+  }
+
+  &.padding input {
+    padding-right: 2.5em;
+  }
+}

@@ -1,0 +1,68 @@
+@import "coinFlipMember/coinFlipMember";
+
+.coin-flip {
+  &__status {
+    span {
+      font-size: 25em;
+    }
+
+    p {
+      font-size: 2.5em;
+    }
+
+    a p {
+      font-size: 1em;
+    }
+
+    &.ended {
+      .coin-flip__creator,
+      .coin-flip__joined {
+        pointer-events: auto;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        a {
+          pointer-events: auto;
+        }
+      }
+
+      .coin-flip__coin {
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__members {
+    margin-bottom: 10em;
+    width: 100%;
+
+    .coin-flip__versus {
+      user-select: none;
+      animation: GoFromDown 0.8s, FadeIn 0.8s ease-in-out;
+      span {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20em;
+      }
+    }
+  }
+
+  &__coin {
+    animation: GoFromDown 1s ease-in-out;
+
+    img {
+      animation: SpinY 1s infinite linear;
+      width: 20em;
+      height: auto;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .coin-flip__members {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,53 @@
+// Variables
+@import "core/variables";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  transition: 0.3s width ease;
+}
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-active);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.5s background-color, 0.5s color ease-in-out;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+@import "core/typography";
+@import "core/images-icons";
+@import "core/blocks";
+@import "core/buttons-links";
+@import "core/inputs";
+@import "core/forms";
+@import "core/animations";
+@import "core/flex";
+
+//Layout
+@import "layout/layout";
+
+//Common
+@import "common/common";
+
+//Pages
+@import "pages/pages";
+
+@import "core/media";

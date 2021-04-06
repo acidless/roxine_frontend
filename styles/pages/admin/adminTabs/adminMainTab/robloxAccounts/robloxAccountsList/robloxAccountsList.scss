@@ -1,0 +1,8 @@
+@import "robloxAccount/robloxAccount";
+
+.roblox-accounts__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35em, 40em));
+  grid-gap: 2.5em;
+  justify-content: center;
+}

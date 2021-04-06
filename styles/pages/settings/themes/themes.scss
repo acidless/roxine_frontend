@@ -1,0 +1,14 @@
+@import "theme/theme";
+
+.themes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 15em);
+  grid-gap: 3em;
+}
+
+@media screen and (max-width: 600px) {
+  .themes {
+    justify-content: center;
+  }
+}

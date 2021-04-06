@@ -1,0 +1,76 @@
+@import "adminMainTab/adminMainTab";
+@import "adminWithdrawTab/adminWithdrawTab";
+@import "adminUsersTab/adminUsersTab";
+
+.admin-table {
+  background: var(--button--dark);
+
+  div {
+    padding: 0 1em 0 1.5em;
+  }
+
+  & > div:nth-child(2n) {
+    background: var(--dark-color);
+  }
+}
+
+.admin-tabs-buttons {
+  transform: rotateZ(-90deg);
+  transform-origin: bottom;
+  position: absolute;
+  top: 10em;
+  left: -5em;
+
+  button {
+    background: var(--button--dark);
+
+    &:hover,
+    &.active {
+      background: var(--color-active);
+    }
+  }
+}
+
+.admin-tab {
+  display: none;
+
+  &__setters-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35em);
+    grid-gap: 3em;
+    max-width: 1000px;
+    justify-content: center;
+    margin: 0 auto 2em auto;
+    align-items: start;
+  }
+
+  &.active {
+    animation: 0.8s FadeIn ease-in-out;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .admin-tabs-buttons {
+    transform: translateX(-50%);
+    transform-origin: center;
+    top: -7em;
+    left: 50%;
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .admin-tabs-buttons {
+    flex-direction: column-reverse;
+
+    &,
+    & button {
+      width: 100%;
+    }
+  }
+
+  .admin-tab {
+    margin-top: 10em;
+  }
+}

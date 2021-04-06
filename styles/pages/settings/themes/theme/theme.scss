@@ -1,0 +1,32 @@
+.theme-example {
+  height: 4em;
+  transition: 0.3s transform ease-in-out;
+
+  &:hover,
+  &.active {
+    transform: scale(1.05);
+  }
+
+  &.ocean {
+    background: #1e232b;
+  }
+  &.dark {
+    background: #141414;
+  }
+  &.light-ocean {
+    background: #292b2f;
+  }
+
+  &__selected {
+    opacity: 0;
+    transition: 0.3s opacity ease-in-out;
+
+    span {
+      font-size: 1.5em;
+    }
+  }
+
+  &.active &__selected {
+    opacity: 1;
+  }
+}

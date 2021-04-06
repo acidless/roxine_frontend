@@ -1,0 +1,23 @@
+.add-balance-check {
+  a {
+    font-size: 2em;
+  }
+
+  .value-wrapper span,
+  a {
+    color: var(--color-active);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-active--hover);
+    }
+  }
+
+  .inline-wrapper * {
+    display: inline;
+  }
+
+  .inline-wrapper .value-wrapper {
+    display: inline-block;
+  }
+}

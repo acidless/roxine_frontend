@@ -1,0 +1,53 @@
+.coin-flip__creator,
+.coin-flip__joined {
+  transition: 0.3s all ease-in-out;
+
+  h3 {
+    font-size: 3em;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    transition: 0.5s opacity ease-in-out;
+  }
+
+  &.win {
+    a {
+      box-shadow: 0px 0px 10px 2px var(--color-active);
+    }
+
+    h3 {
+      opacity: 1;
+    }
+
+    div.flex-container img {
+      opacity: 1;
+    }
+  }
+
+  a {
+    background: var(--dark-color);
+    border-radius: 0.75em;
+    pointer-events: none;
+    padding: 1em;
+
+    img {
+      margin-right: 1em;
+    }
+  }
+
+  div.flex-container p + img {
+    margin: 1em 0 0 0;
+    opacity: 0;
+    width: 2em;
+    height: auto;
+    transition: 0.5s opacity ease-in-out;
+  }
+}
+
+.coin-flip__creator {
+  animation: GoFromLeft 0.8s, FadeIn 0.8s ease-in-out;
+}
+
+.coin-flip__joined {
+  animation: GoFromRight 0.8s, FadeIn 0.8s ease-in-out;
+}
